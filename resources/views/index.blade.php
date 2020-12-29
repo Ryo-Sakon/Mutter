@@ -10,7 +10,7 @@
                     <p>ホーム</p>
                     <form action="{{ action('PostController@create') }}" method="post">
                     @csrf
-                        <input type="text" class="form-control" value="body" placeholder="いまどうしてる？">
+                        <input type="text" class="form-control" id="body" placeholder="いまどうしてる？">
                     </form>
                 </div>
             </div>
