@@ -14,7 +14,7 @@
 
 Auth::routes();
 
-Route::get('/Mutter', 'HomeController@index')->name('home');
+Route::get('/Mutter', 'PostController@index')->name('index');
 Route::post('/Mutter', 'PostController@create')->name('create');
 
 

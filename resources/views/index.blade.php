@@ -11,18 +11,22 @@
                     <form action="{{ route('create') }}" method="post">
                     @csrf
                         <input type="text" class="form-control" name="body" placeholder="いまどうしてる？">
+                        <input type="submit" class="btn btn-primary" value="つぶやく">
                     </form>
                 </div>
             </div>
             
             <div class="card">
-                {{-- @foreach ($collection as $item)
+                @foreach ($posts as $posts)
                     
                 
                 <div class="card-body">
-                    <li>{{ $posts->'' }}</li>
+                    <p>{{ "エンドレス" }}</p>
+                    <p>{{ $posts->user_id }}</p>
+                    <p>{{ str_limit($posts->body, 100) }}</p>
+                    <p>{{ $posts->created_at }}</p>
                 </div>
-                @endforeach --}}
+                @endforeach
             </div>
         </div>
     </div>
