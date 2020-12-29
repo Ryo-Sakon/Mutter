@@ -8,17 +8,21 @@
             <div class="card-header border border-dark mb-4">
                 <div class="card-body">
                     <p>ホーム</p>
-                    <form action="{{ action('PostController@create') }}" method="post">
+                    <form action="{{ route('create') }}" method="post">
                     @csrf
-                        <input type="text" class="form-control" id="body" placeholder="いまどうしてる？">
+                        <input type="text" class="form-control" name="body" placeholder="いまどうしてる？">
                     </form>
                 </div>
             </div>
             
             <div class="card">
+                {{-- @foreach ($collection as $item)
+                    
+                
                 <div class="card-body">
-                    つぶやく内容
+                    <li>{{ $posts->'' }}</li>
                 </div>
+                @endforeach --}}
             </div>
         </div>
     </div>
@@ -26,3 +30,4 @@
 @endsection
 
 {{-- エスケープしないとき、つまり$変数を使う時は!!をつける。 --}}
+{{-- バリデーション＝検証 --}}
