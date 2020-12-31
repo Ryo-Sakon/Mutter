@@ -14,8 +14,8 @@ class PostController extends Controller
         
         
         $posts = Post::get();
-        
-        return view('index', ['posts' => $posts ]);
+
+        return view('index',['posts' => $posts , ]);//'posts'は、index.blade.phpの$postsの意味
     }
     
     
