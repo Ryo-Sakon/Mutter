@@ -5,13 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Post;
+// use App\User;
 
 class PostController extends Controller
 {
     public function index()
     {
+        
+        
         $posts = Post::get();
-        return view('index', ['posts' => $posts]);
+        
+        return view('index', ['posts' => $posts ]);
     }
     
     
@@ -19,13 +23,16 @@ class PostController extends Controller
         //データベースの処理を書く
         $post = new Post;
         $form = $request->all();
+        // $users = User::get();
+        $id = Auth::id();
         // $userName = Auth::user()->name;
-        $post->fill(['body'=>$form['body'],'user_id'=>1]);
+        $post->fill(['body'=>$form['body'],'user_id'=>$id]);
         $post->save();
 
 
-        return redirect('Mutter');
+        return redirect('/');
     }
     
+
 }
 //aa

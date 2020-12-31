@@ -14,8 +14,8 @@
 
 Auth::routes();
 
-Route::get('/Mutter', 'PostController@index')->name('index');
-Route::post('/Mutter', 'PostController@create')->name('create');
+Route::get('/', 'PostController@index')->name('index');   //本来はMutter.com/post/index（アドレス/コントローラ名/アクション名）
+Route::post('/', 'PostController@create')->name('create');  //localhostなので本来.comはつかない。
 
 
 
