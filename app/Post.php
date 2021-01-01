@@ -8,5 +8,7 @@ class Post extends Model
 {
     protected $guarded = array('id');
 
-    
+    protected $dates = [
+        'created_at'
+    ];
 }
